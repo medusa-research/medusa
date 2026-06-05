@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments
+.venv/
+.pt2/
+.env
+.env.*
+!.env.example
+
+# Papers and local drafts
+*.pdf
+
+# Model weights and large generated artifacts
+checkpoints/*
+!checkpoints/.gitkeep
+outputs/*
+!outputs/.gitkeep
+inputs/*
+!inputs/attack/
+inputs/attack/*
+!inputs/attack/.gitkeep
+
+# Logs and experiment trackers
+*.log
+wandb/
+lightning_logs/
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
