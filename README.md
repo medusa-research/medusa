@@ -2,10 +2,10 @@
 
 <p align="center">
   <a href="https://daoqingzha.github.io/medusa/">
-    <img src="https://img.shields.io/badge/Project-Page-blue?style=for-the-badge" alt="Project Page">
+    <img src="https://img.shields.io/badge/Project%20Page-MEDUSA-5B8DEF?style=for-the-badge" alt="Project Page">
   </a>
   <a href="#">
-    <img src="https://img.shields.io/badge/Paper-Coming%20Soon-lightgrey?style=for-the-badge" alt="Paper">
+    <img src="https://img.shields.io/badge/Paper-Coming%20Soon-F4A261?style=for-the-badge" alt="Paper">
   </a>
 </p>
 
@@ -48,12 +48,12 @@ Our paper studies MEDUSA on multiple image-to-video generation backbones, includ
 
 > **Research use only.** This code is released to support reproducible research on the robustness and safety of generative video models. Please use it responsibly and follow the licenses/terms of the underlying models and datasets.
 
-## News
+## 🔥 News
 
 - 🔥 **2026.06**: We released the code for the MEDUSA spectral attack.
 - 🎉 **2026.04**: Our work was accepted by **ICML 2026**.
 
-## Method Overview
+## 🧠 Method Overview
 
 MEDUSA attacks the temporal pathway of image-to-video diffusion by directly supervising attention spectra during generation.
 
@@ -71,7 +71,7 @@ The released implementation is split across:
 - [`attack/utils/svd.py`](attack/utils/svd.py): backend loading, conditioning, denoising, and video generation helpers for the released SVD implementation.
 - [`attack/utils/model_parallel.py`](attack/utils/model_parallel.py): automatic multi-GPU model sharding for memory-heavy video diffusion inference.
 
-## Examples
+## 🖼️ Examples
 
 ### Input images and adversarial images
 
@@ -101,7 +101,7 @@ The released implementation is split across:
   <img src="assets/outputs/003_a.gif" alt="MEDUSA adversarial video 3" width="31%">
 </p>
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Requirements
 
@@ -146,7 +146,7 @@ model:
     ckpt_path: checkpoints/svd.safetensors
 ```
 
-## Usage
+## ⚙️ Usage
 
 ### Run MEDUSA on the provided example images
 
@@ -176,25 +176,6 @@ python3 attack/attack.py \
   --save_video
 ```
 
-### Run on a single image
-
-```bash
-python3 attack/attack.py \
-  --input_path /path/to/image.png \
-  --attack_image_folder outputs/attack \
-  --output_folder outputs/videos \
-  --model_config scripts/sampling/configs/svd.yaml \
-  --devices cuda:0,cuda:1 \
-  --max_memory cuda:0=70GiB,cuda:1=70GiB \
-  --num_frames 14 \
-  --num_steps 25 \
-  --iterations 50 \
-  --epsilon 0.062745098 \
-  --learning_rate 0.02 \
-  --target_timestep 4 \
-  --save_video
-```
-
 ### Important arguments
 
 | Argument | Default | Description |
@@ -218,7 +199,7 @@ Outputs are named from the input image stem:
 <output_folder>/<image_stem>_adv.mp4   # only with --save_video
 ```
 
-## Repository Structure
+## 📁 Repository Structure
 
 ```text
 medusa/
@@ -239,7 +220,7 @@ medusa/
 └── sgm/                           # Stable Generative Models runtime subset for the released backend
 ```
 
-## Citation
+## 📚 Citation
 
 If you find this project useful, please cite our paper:
 
@@ -254,13 +235,13 @@ If you find this project useful, please cite our paper:
 
 Please also cite the corresponding image-to-video backbone when using MEDUSA with Stable Video Diffusion, [DynamiCrafter](https://github.com/Doubiiu/DynamiCrafter), [LTX-Video](https://github.com/Lightricks/LTX-Video), or other video generation models.
 
-## Acknowledgements
+## 🙏 Acknowledgements
 
 This work builds on prior image-to-video generation models, including Stable Video Diffusion / Stable Generative Models, [DynamiCrafter](https://github.com/Doubiiu/DynamiCrafter), and [LTX-Video](https://github.com/Lightricks/LTX-Video). We thank the authors for their inspiring work.
 
 This work was supported by the National Natural Science Foundation of China.
 
-## License
+## 📄 License
 
 This repository is released under the [Apache License 2.0](LICENSE).
 
