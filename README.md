@@ -1,4 +1,4 @@
-<h1 align="center">MEDUSA: Motion Elimination in Diffusion Using Spectral Attack</h1>
+<h1 align="center">MEDUSA:Motion Elimination in Diffusion Using Spectral Attack</h1>
 
 <p align="center">
   <a href="https://daoqingzha.github.io/medusa/">
